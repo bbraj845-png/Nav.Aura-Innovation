@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Enquiry Form — Nav.Aura Innovation</title>
+</head>
+<body>
+  <!-- Static form for Netlify build-time detection (SPA) -->
+  <form name="enquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="enquiry" />
+    <input name="bot-field" type="text" />
+    <input name="name" type="text" />
+    <input name="email" type="email" />
+    <input name="phone" type="tel" />
+    <input name="business" type="text" />
+    <select name="revenue">
+      <option value="0-50k">0-50k</option>
+      <option value="50k-2L">50k-2L</option>
+      <option value="2L-10L">2L-10L</option>
+      <option value="10L-50L">10L-50L</option>
+      <option value="50L-1Cr">50L-1Cr</option>
+      <option value="1Cr+">1Cr+</option>
+    </select>
+    <textarea name="message"></textarea>
+    <input name="industry" type="text" />
+    <input name="goal" type="text" />
+  </form>
+</body>
+</html>

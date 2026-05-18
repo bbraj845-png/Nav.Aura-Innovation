@@ -1,0 +1,290 @@
+/* Nav.Aura premium brand system */
+:root {
+  --brand-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --brand-gold-bright: #f0e6d4;
+  --brand-gold-mid: #d6b37a;
+  --brand-gold-deep: #9a7a45;
+}
+
+/* —— Logo lockup —— */
+.brand-logo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo--footer {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo--header-compact {
+  gap: 8px;
+}
+
+.brand-logo-mark {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-aura-mark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-aura-mark-svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.nav-aura-mark-ring {
+  transition: stroke-opacity 0.4s var(--brand-ease);
+}
+
+.brand-logo:hover .nav-aura-mark-ring {
+  stroke-opacity: 1;
+}
+
+/* Wordmark */
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.15;
+  min-width: 0;
+}
+
+.brand-wordmark--stacked {
+  gap: 3px;
+}
+
+.brand-name {
+  font-family: var(--font-cinzel);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--brand-gold-bright);
+  white-space: nowrap;
+}
+
+.brand-letter-n {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: linear-gradient(165deg, #fff8ee 0%, #e8c98f 45%, #c5a059 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.brand-dot {
+  color: var(--brand-gold-mid);
+  font-weight: 400;
+}
+
+.brand-tagline {
+  font-family: var(--font-inter);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+.brand-tagline--gold {
+  color: var(--gold);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(197, 160, 89, 0.35);
+}
+
+/* Header compact */
+.brand-logo--header-compact .brand-name {
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+.brand-logo--header-compact .brand-tagline--gold {
+  font-size: 8.5px;
+  letter-spacing: 0.16em;
+}
+
+/* Footer — clean lockup */
+.brand-wordmark--footer {
+  gap: 2px;
+}
+
+.brand-name--footer {
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+.brand-logo--footer .brand-letter-n {
+  color: var(--gold);
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+}
+
+.brand-tagline--footer {
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  text-shadow: none;
+}
+
+.brand-logo--footer:hover .brand-name {
+  color: var(--brand-gold-bright);
+}
+
+.brand-logo--footer:hover .brand-letter-n {
+  color: #e8c98f;
+}
+
+.brand-logo--footer:hover .brand-tagline--footer {
+  color: var(--gold);
+  text-shadow: none;
+}
+
+.nav-aura-mark .nav-aura-mark-svg {
+  shape-rendering: geometricPrecision;
+}
+
+.nav-aura-mark-facet {
+  transition: opacity 0.4s var(--brand-ease), filter 0.4s var(--brand-ease);
+}
+
+.nav-aura-mark-facet-shine,
+.nav-aura-mark-diagonal-shine {
+  transition: opacity 0.4s var(--brand-ease);
+}
+
+.brand-logo:hover .nav-aura-mark-facet {
+  filter: brightness(1.08);
+}
+
+.brand-logo:hover .nav-aura-mark-facet-shine,
+.brand-logo:hover .nav-aura-mark-diagonal-shine {
+  opacity: 1;
+}
+
+.brand-logo:hover .brand-name {
+  color: #fff8ee;
+}
+
+.brand-logo:hover .brand-letter-n {
+  background: linear-gradient(165deg, #ffffff 0%, #f0d9a0 50%, #d6b37a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.brand-logo:hover .brand-tagline--gold {
+  color: #e8c98f;
+  text-shadow: 0 0 24px rgba(232, 201, 143, 0.45);
+}
+
+/* Header integration */
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+/* —— Loader —— */
+.brand-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, #0c1e30 0%, #07111f 55%, #050a12 100%);
+  pointer-events: all;
+}
+
+.brand-loader-ambient {
+  position: absolute;
+  width: min(70vw, 420px);
+  height: min(70vw, 420px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(214, 179, 122, 0.2) 0%, transparent 68%);
+  filter: blur(40px);
+  mix-blend-mode: soft-light;
+}
+
+.brand-loader-core {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-loader-glass {
+  padding: 20px;
+  border-radius: 24px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.07), rgba(214, 179, 122, 0.05));
+  border: 1px solid rgba(214, 179, 122, 0.22);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.45),
+    0 0 60px rgba(214, 179, 122, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.brand-loader-label {
+  font-family: var(--font-cinzel);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--brand-gold-bright);
+}
+
+.brand-loader-sub {
+  font-family: var(--font-inter);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-shadow: 0 0 20px rgba(197, 160, 89, 0.35);
+}
+
+.brand-loader-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--brand-gold-mid), transparent);
+  transform-origin: left center;
+}
+
+@media (max-width: 767px) {
+  .brand-logo--header-compact {
+    gap: 7px;
+  }
+
+  .brand-logo--header-compact .brand-name {
+    font-size: 13px;
+  }
+
+  .brand-logo--header-compact .brand-tagline--gold {
+    font-size: 7.5px;
+    letter-spacing: 0.14em;
+  }
+}
+
+.brand-logo:hover .nav-aura-mark-n {
+  opacity: 1;
+}
