@@ -5,6 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import PageHero from '../components/PageHero'
 import CTABlock from '../components/CTABlock'
 import { SERVICES, SERVICE_FILTERS } from '../data/content'
+import SeoProse from '../components/SeoProse'
+import { SEO_CONTENT } from '../data/seoContent'
+import { INTERNAL_LINKS } from '../data/seo'
 
 export default function Services() {
   const [filter, setFilter] = useState('All')
@@ -88,6 +91,8 @@ export default function Services() {
           ))}
         </div>
       </section>
+
+      <SeoProse sections={SEO_CONTENT.services} links={INTERNAL_LINKS.services} />
 
       <CTABlock title="Not Sure Which Service You Need?" text="Book a strategy call. We'll diagnose your business and recommend the right systems." />
     </main>

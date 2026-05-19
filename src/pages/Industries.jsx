@@ -3,6 +3,9 @@ import { ArrowRight, Check } from 'lucide-react'
 import { motion } from 'framer-motion'
 import PageHero from '../components/PageHero'
 import { INDUSTRIES } from '../data/content'
+import SeoProse from '../components/SeoProse'
+import { SEO_CONTENT } from '../data/seoContent'
+import { INTERNAL_LINKS } from '../data/seo'
 
 export default function Industries() {
   return (
@@ -51,6 +54,8 @@ export default function Industries() {
           ))}
         </div>
       </section>
+
+      <SeoProse sections={SEO_CONTENT.industries} links={INTERNAL_LINKS.industries} />
 
       <section className="cta-block">
         <div className="container cta-block-inner">

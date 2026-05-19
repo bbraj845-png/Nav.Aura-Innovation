@@ -2,6 +2,9 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import PageHero from '../components/PageHero'
 import { INSIGHTS, INSIGHT_CATEGORIES } from '../data/content'
+import SeoProse from '../components/SeoProse'
+import { SEO_CONTENT } from '../data/seoContent'
+import { INTERNAL_LINKS } from '../data/seo'
 
 export default function Insights() {
   const [category, setCategory] = useState('All')
@@ -66,6 +69,8 @@ export default function Insights() {
           </div>
         </div>
       </section>
+
+      <SeoProse sections={SEO_CONTENT.insights} links={INTERNAL_LINKS.insights} />
     </main>
   )
 }

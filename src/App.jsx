@@ -11,6 +11,7 @@ import Industries from './pages/Industries'
 import Insights from './pages/Insights'
 import Contact from './pages/Contact'
 import ThankYou from './pages/ThankYou'
+import LocalServices from './pages/LocalServices'
 
 export default function App() {
   const [appReady, setAppReady] = useState(false)
@@ -30,6 +31,7 @@ export default function App() {
               <Route path="industries" element={<Industries />} />
               <Route path="insights" element={<Insights />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="ai-business-systems-india" element={<LocalServices />} />
               <Route path="thank-you" element={<ThankYou />} />
             </Route>
           </Routes>

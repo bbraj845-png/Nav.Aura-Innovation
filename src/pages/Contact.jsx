@@ -4,7 +4,10 @@ import { ArrowRight, Loader2, MessageCircle, Mail, MapPin, Phone } from 'lucide-
 import { motion } from 'framer-motion'
 import PageHero from '../components/PageHero'
 import { CONTACT_INFO, FAQ, CONTACT_PROCESS, REVENUE_OPTIONS, WHATSAPP_LINK } from '../data/content'
-import { submitEnquiryForm } from '../utils/netlifyForm'
+import { submitEnquiryForm } from '../utils/contactForm'
+import SeoProse from '../components/SeoProse'
+import { SEO_CONTENT } from '../data/seoContent'
+import { INTERNAL_LINKS } from '../data/seo'
 
 const initialForm = {
   name: '',
@@ -15,6 +18,7 @@ const initialForm = {
   message: '',
   industry: '',
   goal: '',
+  'bot-field': '',
 }
 
 export default function Contact() {
@@ -45,6 +49,7 @@ export default function Contact() {
         message: messageParts.filter(Boolean).join('\n\n'),
         industry: form.industry,
         goal: form.goal,
+        'bot-field': form['bot-field'],
       })
       navigate('/thank-you')
     } catch (err) {
@@ -109,20 +114,22 @@ export default function Contact() {
           </aside>
 
           <motion.form
-            name="enquiry"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
             className="contact-form"
             onSubmit={handleSubmit}
+            noValidate
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <input type="hidden" name="form-name" value="enquiry" />
             <p className="netlify-honeypot" aria-hidden="true">
               <label>
                 Don&apos;t fill this out:
-                <input name="bot-field" tabIndex={-1} autoComplete="off" />
+                <input
+                  name="bot-field"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={form['bot-field']}
+                  onChange={(e) => update('bot-field', e.target.value)}
+                />
               </label>
             </p>
 
@@ -247,6 +254,8 @@ export default function Contact() {
           </motion.form>
         </div>
       </section>
+
+      <SeoProse sections={SEO_CONTENT.contact} links={INTERNAL_LINKS.contact} />
 
       <section className="section section-alt">
         <div className="container faq-section">

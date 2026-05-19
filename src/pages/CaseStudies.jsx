@@ -3,6 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import PageHero from '../components/PageHero'
 import CTABlock from '../components/CTABlock'
 import { CASE_STUDIES } from '../data/content'
+import SeoProse from '../components/SeoProse'
+import { SEO_CONTENT } from '../data/seoContent'
+import { INTERNAL_LINKS } from '../data/seo'
 
 export default function CaseStudies() {
   const [active, setActive] = useState(CASE_STUDIES[0].id)
@@ -82,6 +85,8 @@ export default function CaseStudies() {
           </AnimatePresence>
         </div>
       </section>
+
+      <SeoProse sections={SEO_CONTENT.caseStudies} links={INTERNAL_LINKS.caseStudies} />
 
       <CTABlock
         title="Your Transformation Story Starts Here"

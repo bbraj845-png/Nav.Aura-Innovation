@@ -17,6 +17,9 @@ import {
 } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import ProcessCycle from '../components/ProcessCycle'
+import SeoProse from '../components/SeoProse'
+import { SEO_CONTENT } from '../data/seoContent'
+import { INTERNAL_LINKS } from '../data/seo'
 import {
   VALUE_PROPS,
   PROBLEM_CARDS,
@@ -48,7 +51,15 @@ export default function Home() {
   return (
     <main className="home-page">
       <section className="hero">
-        <img src={HERO_IMAGE} alt="" className="hero-bg-img" aria-hidden />
+        <img
+          src={HERO_IMAGE}
+          alt="Abstract crystal growth visual representing business systems and scale"
+          className="hero-bg-img"
+          width={1920}
+          height={1080}
+          fetchPriority="high"
+          decoding="async"
+        />
         <div className="hero-overlay" aria-hidden />
         <HeroOrbits />
         <div className="hero-stars" aria-hidden />
@@ -157,7 +168,7 @@ export default function Home() {
           <SectionHeader
             eyebrow="How It Connects"
             title="One Interdependent Cycle"
-            subtitle="Analysis, system design, implementation, and optimization feed each other — continuously."
+            subtitle="Analysis, optimization, system design, and implementation feed each other — continuously."
           />
           <ProcessCycle />
         </div>
@@ -323,6 +334,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <SeoProse sections={SEO_CONTENT.home} links={INTERNAL_LINKS.home} />
 
       <section className="cta-section" id="contact">
         <div className="cta-glow" />

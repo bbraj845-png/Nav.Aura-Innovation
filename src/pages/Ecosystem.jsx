@@ -5,6 +5,9 @@ import { motion } from 'framer-motion'
 import PageHero from '../components/PageHero'
 import CTABlock from '../components/CTABlock'
 import { ECOSYSTEM_ARMS, ECOSYSTEM_FLOW } from '../data/content'
+import SeoProse from '../components/SeoProse'
+import { SEO_CONTENT } from '../data/seoContent'
+import { INTERNAL_LINKS } from '../data/seo'
 
 export default function Ecosystem() {
   const [active, setActive] = useState('agency')
@@ -96,6 +99,8 @@ export default function Ecosystem() {
           )}
         </div>
       </section>
+
+      <SeoProse sections={SEO_CONTENT.ecosystem} links={INTERNAL_LINKS.ecosystem} />
 
       <section className="mission-banner">
         <div className="container center">

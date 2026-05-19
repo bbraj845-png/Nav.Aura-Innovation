@@ -4,6 +4,9 @@ import { motion } from 'framer-motion'
 import PageHero from '../components/PageHero'
 import CTABlock from '../components/CTABlock'
 import { PHILOSOPHY } from '../data/content'
+import SeoProse from '../components/SeoProse'
+import { SEO_CONTENT } from '../data/seoContent'
+import { INTERNAL_LINKS } from '../data/seo'
 
 const philosophyIcons = [Target, Eye, Heart, Zap]
 
@@ -168,6 +171,8 @@ export default function About() {
           </Link>
         </div>
       </section>
+
+      <SeoProse sections={SEO_CONTENT.about} links={INTERNAL_LINKS.about} />
 
       <CTABlock
         title="Ready to Build Your Systems?"

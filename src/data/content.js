@@ -61,6 +61,7 @@ export const FOOTER_LINKS = {
     { label: 'Our Ecosystem', href: '/ecosystem' },
     { label: 'Case Studies', href: '/case-studies' },
     { label: 'Insights', href: '/insights' },
+    { label: 'AI Systems — India', href: '/ai-business-systems-india' },
   ],
   Services: [
     { label: 'Branding', href: '/services' },
@@ -145,8 +146,8 @@ export const TESTIMONIALS = [
 ]
 
 export const PROCESS_CYCLE = [
-  { id: 'optimization', label: 'Optimization', desc: 'Refine, measure, and compound what works.', position: 'top' },
-  { id: 'analysis', label: 'Analysis', desc: 'Audit operations, bottlenecks, and opportunities.', position: 'right' },
+  { id: 'analysis', label: 'Analysis', desc: 'Audit operations, bottlenecks, and opportunities.', position: 'top' },
+  { id: 'optimization', label: 'Optimization', desc: 'Refine, measure, and compound what works.', position: 'right' },
   { id: 'design', label: 'System Design', desc: 'Architect brand, ops, and tech as one system.', position: 'bottom' },
   { id: 'implementation', label: 'Implementation', desc: 'Build SOPs, automations, and workflows.', position: 'left' },
 ]

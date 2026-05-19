@@ -1,0 +1,7 @@
+# https://www.navaurainnovation.com/robots.txt
+User-agent: *
+Allow: /
+
+Disallow: /thank-you
+
+Sitemap: https://www.navaurainnovation.com/sitemap.xml

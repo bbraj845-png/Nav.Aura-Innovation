@@ -3,7 +3,9 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import { ArrowRight, Facebook, Instagram, Linkedin, Mail, Menu, MessageCircle, X, Youtube } from 'lucide-react'
 import BrandLogo from './brand/BrandLogo'
 import WhatsAppFloat from './WhatsAppFloat'
+import SeoHead from './SeoHead'
 import { CONTACT_INFO, FOOTER_LINKS, NAV_LINKS, SOCIAL_LINKS, WHATSAPP_LINK } from '../data/content'
+import { getPageSeo } from '../data/seo'
 
 const SOCIAL_ICONS = {
   YouTube: Youtube,
@@ -48,9 +50,17 @@ export default function Layout() {
   }, [menuOpen])
 
   const isHome = location.pathname === '/'
+  const seo = getPageSeo(location.pathname)
 
   return (
     <div className="app-shell">
+      <SeoHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        pathname={location.pathname}
+        index={seo.index !== false}
+      />
       <header
         className={`site-header ${scrolled ? 'scrolled' : ''} ${isHome ? 'site-header--hero' : ''}`}
       >
@@ -179,3 +189,4 @@ export default function Layout() {
     </div>
   )
 }
+
