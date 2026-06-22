@@ -1,5 +1,18 @@
 # https://www.navaurainnovation.com/robots.txt
+# Allow all crawlers to index the public website and point them to the sitemap.
+
 User-agent: *
 Allow: /
 
+# Explicit allows for major crawlers (optional; kept for clarity)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap (must be the canonical production sitemap URL)
 Sitemap: https://www.navaurainnovation.com/sitemap.xml
+
+# Optional Host directive (non-standard, safe)
+Host: https://www.navaurainnovation.com
