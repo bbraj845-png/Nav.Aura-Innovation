@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ArrowRight, Loader2, MessageCircle, Mail, MapPin, Phone } from 'lucide-react'
+import { ArrowRight, Loader2, Mail, MapPin } from 'lucide-react'
 import { motion } from 'framer-motion'
 import PageHero from '../components/PageHero'
-import { CONTACT_INFO, FAQ, CONTACT_PROCESS, REVENUE_OPTIONS, WHATSAPP_LINK } from '../data/content'
+import { CONTACT_INFO, FAQ, CONTACT_PROCESS, REVENUE_OPTIONS } from '../data/content'
 import { submitEnquiryForm } from '../utils/contactForm'
 import SeoProse from '../components/SeoProse'
 import { SEO_CONTENT } from '../data/seoContent'
@@ -72,13 +72,6 @@ export default function Contact() {
         <div className="container contact-grid">
           <aside className="contact-sidebar">
             <h3>Contact</h3>
-            <a href={WHATSAPP_LINK} className="contact-item contact-item--link" target="_blank" rel="noopener noreferrer">
-              <Phone size={16} />
-              <div>
-                <span>Phone / WhatsApp</span>
-                <p>{CONTACT_INFO.phoneDisplay}</p>
-              </div>
-            </a>
             <a href={`mailto:${CONTACT_INFO.email}`} className="contact-item contact-item--link">
               <Mail size={16} />
               <div>
@@ -93,14 +86,6 @@ export default function Contact() {
                 <p>India — Serving Globally</p>
               </div>
             </div>
-            <a href={WHATSAPP_LINK} className="whatsapp-card" target="_blank" rel="noopener noreferrer">
-              <MessageCircle size={20} />
-              <div>
-                <strong>Chat on WhatsApp</strong>
-                <span>Fastest response</span>
-              </div>
-              <ArrowRight size={14} />
-            </a>
             <h3>Our Process</h3>
             {CONTACT_PROCESS.slice(0, 3).map((step) => (
               <div key={step.step} className="process-mini">
