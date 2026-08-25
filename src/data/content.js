@@ -76,9 +76,7 @@ export const FOOTER_LINKS = {
     { label: 'Real Estate', href: '/industries' },
   ],
   Connect: [
-    { label: 'Contact Us', href: '/contact' },
     { label: 'Book a Strategy Call', href: '/contact' },
-    { label: 'Client Portal', href: '#' },
   ],
 }
 
