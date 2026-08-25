@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
-import { ArrowRight, Facebook, Instagram, Linkedin, Mail, Menu, MessageCircle, X, Youtube } from 'lucide-react'
+import { ArrowRight, Facebook, Instagram, Linkedin, Mail, Menu, X, Youtube } from 'lucide-react'
 import BrandLogo from './brand/BrandLogo'
-import WhatsAppFloat from './WhatsAppFloat'
 import SeoHead from './SeoHead'
-import { CONTACT_INFO, FOOTER_LINKS, NAV_LINKS, SOCIAL_LINKS, WHATSAPP_LINK } from '../data/content'
+import { CONTACT_INFO, FOOTER_LINKS, NAV_LINKS, SOCIAL_LINKS } from '../data/content'
 import { getPageSeo } from '../data/seo'
 
 const SOCIAL_ICONS = {
@@ -114,23 +113,10 @@ export default function Layout() {
               BOOK A STRATEGY CALL
             </Link>
           </li>
-          <li>
-            <a
-              href={WHATSAPP_LINK}
-              className="mobile-menu-wa"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMenuOpen(false)}
-            >
-              <MessageCircle size={18} />
-              Chat on WhatsApp
-            </a>
-          </li>
         </ul>
       </nav>
 
       <Outlet />
-      <WhatsAppFloat />
 
       <footer className="site-footer">
         <div className="container">
@@ -144,10 +130,6 @@ export default function Layout() {
                 <a href={`mailto:${CONTACT_INFO.email}`}>
                   <Mail size={16} />
                   {CONTACT_INFO.email}
-                </a>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle size={16} />
-                  WhatsApp {CONTACT_INFO.phoneDisplay}
                 </a>
               </div>
               <div className="footer-social">
@@ -189,4 +171,3 @@ export default function Layout() {
     </div>
   )
 }
-
