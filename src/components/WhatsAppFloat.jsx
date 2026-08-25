@@ -15,7 +15,7 @@ export default function WhatsAppFloat() {
       className="whatsapp-float"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp — +91 99531 49283"
+      aria-label="Chat on WhatsApp"
     >
       <span className="whatsapp-float__inner">
         <span className="whatsapp-float-pulse" aria-hidden />
