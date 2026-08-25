@@ -12,7 +12,6 @@ export const BUSINESS = {
   description:
     'AI-driven business systems, SOP architecture, automation, and growth consulting for Indian schools, institutes, and SMEs.',
   email: 'navaurainnovation@gmail.com',
-  phone: '+91-9953149283',
   areaServed: 'India',
   address: {
     '@type': 'PostalAddress',
