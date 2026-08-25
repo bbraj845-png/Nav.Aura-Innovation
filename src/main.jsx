@@ -7,7 +7,6 @@ import './App.css'
 import './pages.css'
 import './mobile.css'
 import './brand.css'
-import './whatsapp.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
